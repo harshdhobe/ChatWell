@@ -101,7 +101,7 @@ if 'chain' not in st.session_state:
 
 # Load model
 if st.session_state.chain is None:
-    with st.spinner("Loading model..."):
+    with st.spinner("Loading AI Model..."):
         st.session_state.chain = load_model()
 
 # Display chat messages
@@ -118,7 +118,7 @@ if prompt := st.chat_input("Ask a medical question"):
     
     # Get bot response
     with st.chat_message("assistant"):
-        with st.spinner("Thinking..."):
+        with st.spinner(" "):
             response = st.session_state.chain.invoke(prompt)
         st.write(response)
     
